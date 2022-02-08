@@ -6,10 +6,10 @@ import seaborn as sns
 #read data
 data = pd.read_csv('/Users/iv_dragon/Documents/GitHub/data_viz/data/dovody_smrti_pocetne.csv',sep = ';')
 reasons = data.dôvod
-values1 = data.perc2021
-values2 = data.perc19to17
-values3 = data.perc19to15
-values4 = data.perc19
+values1 = data.year2021
+values2 = data.years2019to2017
+values3 = data.years2019to2015
+values4 = data.year2019
 
 #width of bars
 barWidth = 1
