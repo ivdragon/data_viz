@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 
 #read data
-data = pd.read_csv('/Users/iv_dragon/Documents/GitHub/data_viz/data/dovody_smrti_percentualne.csv',sep = ';')
+data = pd.read_csv('/Users/iv_dragon/Documents/GitHub/data_viz/data/dovody_smrti_pocetne.csv',sep = ';')
 reasons = data.dôvod
 values1 = data.perc2021
 values2 = data.perc19to17
@@ -15,20 +15,20 @@ values4 = data.perc19
 barWidth = 1
 
 #heights of bars
-bars1 = []
-bars2 = []
-bars3 = []
-bars4 = []
+bars1 = list(values1)
+bars2 = list(values2)
+bars3 = list(values3)
+bars4 = list(values4)
 
-for i in range(len(values1)):
-     values1[i] = values1[i].replace(',','.')
-     bars1.append(float(values1[i])*100)
-     values2[i] = values2[i].replace(',','.')
-     bars2.append(float(values2[i])*100)
-     values3[i] = values3[i].replace(',','.')
-     bars3.append(float(values3[i])*100)
-     values4[i] = values4[i].replace(',','.')
-     bars4.append(float(values4[i])*100)
+##for i in range(len(values1)):
+##     values1[i] = values1[i].replace(',','.')
+##     bars1.append(float(values1[i])*100)
+##     values2[i] = values2[i].replace(',','.')
+##     bars2.append(float(values2[i])*100)
+##     values3[i] = values3[i].replace(',','.')
+##     bars3.append(float(values3[i])*100)
+##     values4[i] = values4[i].replace(',','.')
+##     bars4.append(float(values4[i])*100)
 
 #bars position
 r1 = [5*x for x in range(len(bars1))]
